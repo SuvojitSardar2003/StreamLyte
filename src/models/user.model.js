@@ -59,7 +59,7 @@ userSchema.methods.isPasswordCorrect = async function (password){
   return await bcrypt.compare(password, this.password)
 }
 
-//jwt is a bearer token
+//jwt is a bearer token--->token creation
 userSchema.methods.generateAccessToken = function(){
     return jwt.sign(
         {
